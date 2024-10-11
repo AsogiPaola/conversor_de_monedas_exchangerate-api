@@ -13,11 +13,25 @@ Peso Argentino  --> ARS  <br>
 Real Brasileño  --> BRL <br>
 Peso Colombiano --> COP <br>
 
-<h2>MENU DE CONVERSION </h2>
-1. Dólar           --> Peso Argentinos <br>
-2. Peso Argentino  --> Dólar <br>
-3. Dólar           --> Real Brasileños <br>
-4. Real Brasileño  --> Dólar <br>
-5. Dólar           --> Peso Colombiano <br>
-6. Peso Colombiano --> Dólar <br>
-7. Salir
+<h2>FUNCIONAMIENTO</h2>
+Al iniciar la ejecución del programa se muestra la siguiente ventana emergente:
+![menuEmergente](https://github.com/user-attachments/assets/dee58397-664b-4f7c-8725-1d0451301338)
+
+Al seleccionar una opcion dentro de las que se muestran en el menu, se mostrara una nueva ventana emergente donde se podra ingresar la cantidad que se desea convertir:
+![cantidadAConvertir](https://github.com/user-attachments/assets/60a34591-7112-469b-823e-f851a1eaeeae)
+
+Una vez ingresada la cantidad, se muestra una nueva ventana emergente con el resultado de esta conversión:
+![resultado](https://github.com/user-attachments/assets/bb3dc469-6eea-4e72-9075-604437396bd9)
+
+
+Este ciclo continua hasta que se decida salir, usando 2 opciones, la que se encuentra en el menu correspondiente a la opcion 7 
+![salida](https://github.com/user-attachments/assets/e28b1474-0d8d-4ad8-9bca-618c708db3af)
+
+o presionando el boton de "Cancel" que se muestra en la imagen donde se ve el menu
+![cancel](https://github.com/user-attachments/assets/14aaa0af-91d4-44a2-9cf5-2ae7231cd7ad)
+
+Por otro lado, si se ingresa datos no validos como un numero diferente a los que se presentan en el menu se muesrta:
+![numeorFueradDelMenu](https://github.com/user-attachments/assets/517c042e-cc2b-45de-809c-5203736bcd36)
+
+O si se ingresa un String, o cualquier elemente¿o diferente a un numero se muestra:
+![letra](https://github.com/user-attachments/assets/e3738ff6-f9dd-4d67-a7a8-6b12b4cb4d4b)
