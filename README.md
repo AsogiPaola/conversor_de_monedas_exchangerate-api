@@ -15,7 +15,8 @@ Peso Colombiano --> COP <br>
 
 <h2>FUNCIONAMIENTO</h2>
 Al iniciar la ejecución del programa se muestra la siguiente ventana emergente:  <br>
-![menuEmergente](https://github.com/user-attachments/assets/dee58397-664b-4f7c-8725-1d0451301338)
+
+![menuEmergente](https://github.com/user-attachments/assets/e6616061-5927-4981-b323-75233f684a03)
 
 Al seleccionar una opcion dentro de las que se muestran en el menu, se mostrara una nueva ventana emergente donde se podra ingresar la cantidad que se desea convertir: <br>
 ![cantidadAConvertir](https://github.com/user-attachments/assets/60a34591-7112-469b-823e-f851a1eaeeae)
@@ -31,6 +32,7 @@ o presionando el boton de "Cancel" que se muestra en la imagen donde se ve el me
 
 <h4>Entradas no validas</h4>
 Por otro lado, si se ingresa datos no validos como un numero diferente a los que se presentan en el menu se muesrta:  <br>
+
 ![numeorFueradDelMenu](https://github.com/user-attachments/assets/517c042e-cc2b-45de-809c-5203736bcd36)
 
 O si se ingresa un String, o cualquier elemente¿o diferente a un numero se muestra:  <br>
