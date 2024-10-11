@@ -33,7 +33,9 @@ o presionando el boton de "Cancel" que se muestra en la imagen donde se ve el me
 <h4>Entradas no validas</h4>
 Por otro lado, si se ingresa datos no validos como un numero diferente a los que se presentan en el menu se muesrta:  <br>
 
-![numeorFueradDelMenu](https://github.com/user-attachments/assets/517c042e-cc2b-45de-809c-5203736bcd36)
+![numerofueradelmenu](https://github.com/user-attachments/assets/38eb7b7c-fe11-423f-803d-d3c805cf44cd)
 
-O si se ingresa un String, o cualquier elemente¿o diferente a un numero se muestra:  <br>
-![letra](https://github.com/user-attachments/assets/e3738ff6-f9dd-4d67-a7a8-6b12b4cb4d4b)
+O si se ingresa un String, o cualquier elemento diferente a un numero se muestra:  <br>
+![letra](https://github.com/user-attachments/assets/c2804789-2f92-47d9-8672-9aecab219796)
+
+Este es el funcionamiento basico del Convesor de Monedas.
