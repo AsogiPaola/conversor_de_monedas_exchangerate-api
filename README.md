@@ -14,10 +14,10 @@ Real Brasileño  --> BRL
 Peso Colombiano --> COP
 
 <h2>MENU DE CONVERSION </h2>
-1. Dólar           --> Peso Argentinos
-2. Peso Argentino  --> Dólar
-3. Dólar           --> Real Brasileños
-4. Real Brasileño  --> Dólar
-5. Dólar           --> Peso Colombiano
-6. Peso Colombiano --> Dólar
+1. Dólar           --> Peso Argentinos <br>
+2. Peso Argentino  --> Dólar <br>
+3. Dólar           --> Real Brasileños <br>
+4. Real Brasileño  --> Dólar <br>
+5. Dólar           --> Peso Colombiano <br>
+6. Peso Colombiano --> Dólar <br>
 7. Salir
