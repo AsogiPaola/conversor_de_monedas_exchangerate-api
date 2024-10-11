@@ -11,17 +11,17 @@ public class Main {
         String ingreso = "Por favor ingrese la cantidad que desea convertir: ";
 
         String menu = """
-                ******************************************
                 Bienvenido al Conversor de Monedas Internacionales
                 Seleccione una opción para conocer la conversión que desea realizar:
-                1. Dólar           --> Peso Argentinos
-                2. Peso Argentino  --> Dólar
-                3. Dólar           --> Real Brasileños
-                4. Real Brasileño  --> Dólar
-                5. Dólar           --> Peso Colombiano
-                6. Peso Colombiano --> Dólar
+                
+                1. Dólar            --> Peso Argentinos
+                2. Peso Argentino   --> Dólar
+                3. Dólar            --> Real Brasileños
+                4. Real Brasileño   --> Dólar
+                5. Dólar            --> Peso Colombiano
+                6. Peso Colombiano  --> Dólar
                 7. Salir
-                ******************************************""";
+                """;
 
         Peticiones peticiones = new Peticiones();
         int opcion = 0;
@@ -71,13 +71,13 @@ public class Main {
                         mostrarResultado(moneda, cantidadDinero);
                         break;
                     case 7:
-                        JOptionPane.showMessageDialog(null, "Gracias por utilizar nuestro programa de Conversión de Monedas. ¡Vuelva pronto!");
+                        JOptionPane.showMessageDialog(null, "Gracias por utilizar nuestro programa de Conversión de Monedas. \n ¡Vuelva pronto!");
                         break;
                     default:
-                        JOptionPane.showMessageDialog(null, "Opción no válida. Por favor, ingrese una opción correcta.");
+                        JOptionPane.showMessageDialog(null, "Opción no válida. \n Por favor, ingrese una de las opciones del menu.");
                 }
             } catch (NumberFormatException e) {
-                JOptionPane.showMessageDialog(null, "Entrada no válida. Por favor, ingrese un número.");
+                JOptionPane.showMessageDialog(null, "Entrada no válida. \n Por favor, ingrese un número.");
             }
         }
     }
