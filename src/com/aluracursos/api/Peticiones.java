@@ -21,7 +21,7 @@ public class Peticiones {
 
     public InfoMonedas getConvertMoney(String base_code, String target_code, Double value) throws IOException, InterruptedException{
         String url = "https://v6.exchangerate-api.com/v6/4eb6648806143a3d7addb2c7/pair/"+base_code+"/"+target_code+"/"+value;
-        System.out.println(url);
+        //System.out.println(url);
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create(url))
