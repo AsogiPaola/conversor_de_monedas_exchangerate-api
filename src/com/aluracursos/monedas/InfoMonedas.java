@@ -12,23 +12,19 @@ public class InfoMonedas {
         this.target_code = conversor.target_code();
         this.base_code = conversor.base_code();
     }
-    public Double getConversion() {
-        System.out.println("Este es el valor de la conversion: "+ conversion);
+    public Double getConversion() {//System.out.println("Este es el valor de la conversion: "+ conversion);
         return conversion;
     }
 
-    public Double getConversion_rate() {
-        System.out.println("Este es conversion rate: "+ conversion_rate);
+    public Double getConversion_rate() {//System.out.println("Este es conversion rate: "+ conversion_rate);
         return conversion_rate;
     }
 
-    public String getTarget_code() {
-        System.out.println("Este es el target_code: " +target_code);
+    public String getTarget_code() {//System.out.println("Este es el target_code: " +target_code);
         return target_code;
     }
 
-    public String getBase_code() {
-        System.out.println("Este el es codigo base: "+ base_code);
+    public String getBase_code() {//System.out.println("Este el es codigo base: "+ base_code);
         return base_code;
     }
 }
