@@ -4,11 +4,11 @@
 Este proyecto permite convertir monedas de manera rápida y sencilla utilizando las últimas tasas de cambio proporcionadas por ExchangeRate-API. 
 Desarrollado en el marco de especialización Back-End en java, para el programa ONE de Alura LATAM + Oracle
 
-#CONSUMO DE LA API:
+# CONSUMO DE LA API:
 
 Se utilizó la API (ExchangeRate-API) de tasas de cambio para obtener los últimos datos de conversión de monedas. El codigo utiliza la biblioteca HttpClient para realizar solicitudes a la API. Se utilizó la clase HttpRequest para configurar y personalizar las solicitudes. 
 
-#MONEDAS
+<h2>MONEDAS</h2>
 
 Lista de monedas disponibles para la elección, permitiendo al usuario convertir entre las opciones que brinda la API.
 Dólar           --> USD 
