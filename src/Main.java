@@ -1,90 +1,96 @@
 import com.aluracursos.api.Peticiones;
 import com.aluracursos.monedas.InfoMonedas;
+
+import javax.swing.*;
 import java.io.IOException;
-import java.util.InputMismatchException;
-import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) throws IOException, InterruptedException {
-        Scanner teclado = new Scanner(System.in);
         InfoMonedas moneda;
-        int opcion = 0;
-        double cantidadDinero= 0.0;
+        double cantidadDinero = 0.0;
         String ingreso = "Por favor ingrese la cantidad que desea convertir: ";
 
         String menu = """
                 ******************************************
-                Bienvenido al Conversor de Monedas Internacionales\s
-                Seleccione una Opcion para conocer la conversion que desea realizar:\s
+                Bienvenido al Conversor de Monedas Internacionales
+                Seleccione una opción para conocer la conversión que desea realizar:
                 1. Dólar           --> Peso Argentinos
                 2. Peso Argentino  --> Dólar
                 3. Dólar           --> Real Brasileños
                 4. Real Brasileño  --> Dólar
                 5. Dólar           --> Peso Colombiano
                 6. Peso Colombiano --> Dólar
-                7. Salir\s
+                7. Salir
                 ******************************************""";
 
         Peticiones peticiones = new Peticiones();
+        int opcion = 0;
 
         while (opcion != 7) {
             try {
-                System.out.println(menu);
-                opcion = teclado.nextInt(); // Lee la opción del usuario
+                // Mostrar el menú en una ventana emergente
+                String opcionStr = JOptionPane.showInputDialog(null, menu, "Conversor de Monedas", JOptionPane.QUESTION_MESSAGE);
+
+                if (opcionStr == null) {
+                    // Si el usuario cierra la ventana emergente
+                    JOptionPane.showMessageDialog(null, "Programa cerrado.");
+                    break;
+                }
+
+                opcion = Integer.parseInt(opcionStr); // Convertir la opción a entero
 
                 switch (opcion) {
                     case 1:
-                        System.out.println(ingreso);
-                        cantidadDinero = teclado.nextDouble();
+                        cantidadDinero = obtenerCantidad(ingreso);
                         moneda = peticiones.getConvertMoney("USD", "ARS", cantidadDinero);
-                        System.out.println("Por un " + moneda.getBase_code() + " obtienes " + moneda.getConversion_rate() + " " + moneda.getTarget_code());
-                        System.out.println(cantidadDinero + " " + moneda.getBase_code() + " corresponden a " + moneda.getConversion() + " " + moneda.getTarget_code());
+                        mostrarResultado(moneda, cantidadDinero);
                         break;
                     case 2:
-                        System.out.println(ingreso);
-                        cantidadDinero = teclado.nextDouble();
+                        cantidadDinero = obtenerCantidad(ingreso);
                         moneda = peticiones.getConvertMoney("ARS", "USD", cantidadDinero);
-                        System.out.println("Por un " + moneda.getBase_code() + " obtienes " + moneda.getConversion_rate() + " " + moneda.getTarget_code());
-                        System.out.println(cantidadDinero + " " + moneda.getBase_code() + " obtienes " + moneda.getConversion() + " " + moneda.getTarget_code());
+                        mostrarResultado(moneda, cantidadDinero);
                         break;
                     case 3:
-                        System.out.println(ingreso);
-                        cantidadDinero = teclado.nextDouble();
+                        cantidadDinero = obtenerCantidad(ingreso);
                         moneda = peticiones.getConvertMoney("USD", "BRL", cantidadDinero);
-                        System.out.println("Por un " + moneda.getBase_code() + " obtienes " + moneda.getConversion_rate() + " " + moneda.getTarget_code());
-                        System.out.println(cantidadDinero + " " + moneda.getBase_code() + " obtienes " + moneda.getConversion() + " " + moneda.getTarget_code());
+                        mostrarResultado(moneda, cantidadDinero);
                         break;
                     case 4:
-                        System.out.println(ingreso);
-                        cantidadDinero = teclado.nextDouble();
+                        cantidadDinero = obtenerCantidad(ingreso);
                         moneda = peticiones.getConvertMoney("BRL", "USD", cantidadDinero);
-                        System.out.println("Por un " + moneda.getBase_code() + " obtienes " + moneda.getConversion_rate() + " " + moneda.getTarget_code());
-                        System.out.println(cantidadDinero + " " + moneda.getBase_code() + " obtienes " + moneda.getConversion() + " " + moneda.getTarget_code());
+                        mostrarResultado(moneda, cantidadDinero);
                         break;
                     case 5:
-                        System.out.println(ingreso);
-                        cantidadDinero = teclado.nextDouble();
+                        cantidadDinero = obtenerCantidad(ingreso);
                         moneda = peticiones.getConvertMoney("USD", "COP", cantidadDinero);
-                        System.out.println("Por un " + moneda.getBase_code() + " obtienes " + moneda.getConversion_rate() + " " + moneda.getTarget_code());
-                        System.out.println(cantidadDinero + " " + moneda.getBase_code() + " obtienes " + moneda.getConversion() + " " + moneda.getTarget_code());
+                        mostrarResultado(moneda, cantidadDinero);
                         break;
                     case 6:
-                        System.out.println(ingreso);
-                        cantidadDinero = teclado.nextDouble();
+                        cantidadDinero = obtenerCantidad(ingreso);
                         moneda = peticiones.getConvertMoney("COP", "USD", cantidadDinero);
-                        System.out.println("Por un " + moneda.getBase_code() + " obtienes " + moneda.getConversion_rate() + " " + moneda.getTarget_code());
-                        System.out.println(cantidadDinero + " " + moneda.getBase_code() + " obtienes " + moneda.getConversion() + " " + moneda.getTarget_code());
+                        mostrarResultado(moneda, cantidadDinero);
                         break;
                     case 7:
-                        System.out.println("Gracias por utilizar nuestro programa de Conversion de Monedas, vuelva pronto.");
+                        JOptionPane.showMessageDialog(null, "Gracias por utilizar nuestro programa de Conversión de Monedas. ¡Vuelva pronto!");
                         break;
                     default:
-                        System.out.println("Opción no válida, por favor ingrese una opción correcta.");
+                        JOptionPane.showMessageDialog(null, "Opción no válida. Por favor, ingrese una opción correcta.");
                 }
-            } catch (InputMismatchException e) {
-                System.out.println("Entrada no válida. Por favor, ingrese un número.");
-                teclado.next(); // Limpiar la entrada inválida
+            } catch (NumberFormatException e) {
+                JOptionPane.showMessageDialog(null, "Entrada no válida. Por favor, ingrese un número.");
             }
         }
+    }
+
+    // Método auxiliar para pedir la cantidad de dinero en una ventana emergente
+    private static double obtenerCantidad(String mensaje) {
+        String cantidadStr = JOptionPane.showInputDialog(null, mensaje, "Cantidad a convertir", JOptionPane.QUESTION_MESSAGE);
+        return Double.parseDouble(cantidadStr); // Convertir la cantidad a double
+    }
+
+    // Método auxiliar para mostrar el resultado en una ventana emergente
+    private static void mostrarResultado(InfoMonedas moneda, double cantidadDinero) {
+        String resultado = cantidadDinero + " " + moneda.getBase_code() + " corresponden a " + moneda.getConversion() + " " + moneda.getTarget_code();
+        JOptionPane.showMessageDialog(null, resultado, "Resultado", JOptionPane.INFORMATION_MESSAGE);
     }
 }
